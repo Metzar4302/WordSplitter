@@ -1,19 +1,18 @@
+#gl
+vowel_arr = ['а', 'е', 'ё', 'и', 'й', 'о', 'у', 'ы', 'э', 'ю', 'я']
+#sogl
+consonant_arr = ['б', 'в', 'г', 'д', 'ж', 'з', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ']
+
+spec_letters = ['й', 'р', 'л', 'м', 'н']
+
 def Main():
-    #gl
-    vowel_arr = ['а', 'е', 'ё', 'и', 'й', 'о', 'у', 'ы', 'э', 'ю', 'я']
-    #sogl
-    consonant_arr = ['б', 'в', 'г', 'д', 'ж', 'з', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ']
-
-    spec_letters = ['й', 'р', 'л', 'м', 'н']
-
     input = "Сообщение"
-    status = "Srch"
-    output = ""
-
-    Splitter("почта", output, status, vowel_arr, consonant_arr, spec_letters)
+    print(Splitter(input))
 
 #! Wrong
-def Splitter(input, output, status, vowel_arr, consonant_arr, spec_letters):
+def Splitter(input):
+    output = ""
+    status = "Srch"
     for i in range(len(input)):
         if str.lower(input[i]) in consonant_arr:
             if status == "Srch":
@@ -48,6 +47,6 @@ def Splitter(input, output, status, vowel_arr, consonant_arr, spec_letters):
             print("Wrong letter!")
             status = "Error. Wrong letter"
             break
-    print(output)
+    return output
 
 Main()
