@@ -3,5 +3,5 @@ log.txt
 desktop.ini
 tempCodeRunnerFile.py
 .vscode/*
-__pycache_/*
+__pycache__/*
 *~
